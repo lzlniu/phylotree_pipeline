@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	<title>你好啊~</title>
+	<link href="content/styleY.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="content/Enter.js"></script>
+    <script type="text/javascript" src="content/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="content/togg.js"></script>
+    <script type="text/javascript" src="content/music.js"></script>
+    <link href='http://fonts.font.im/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.font.im/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+</head>
+<body onkeydown="keyLogin();">
+    <div class="header">
+        <div id="header_text">
+            <h1>Hello!</h1>
+            <h2>Good day!</h2>
+        </div>
+    </div>
+    <div id="nav">
+        <ul class="nav_ul">
+            <li id="nav_ord">
+                <a href="content/Order.html" hidefocus="true" title="Order">下单<span>Order</span></a>
+            </li>
+            <li id="nav_me">
+                <a href="content/My.html" hidefocus="true" title="My">我的<span>My</span></a>
+            </li>
+            <li id="nav_map">
+                <a href="content/Map.html" hidefocus="true" title="Map">地图<span>Map</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <div id="main_text">
+            <p>下面两个标识，一个是跳至顶部的快捷按钮，一个是音乐播放/停止</p>
+            <p>下面的聊天泡泡点击一下就会“打开”哦~</p>
+        </div>
+        <div id="main_text2">
+            <p>这是一个网页</p>
+        </div>
+        <div id="main_text3">
+            <p>也可以叫做前端</p>
+        </div>
+        <div id="main_text4">
+            <p>用服务器/网站还能做啥呢？</p>
+        </div>
+        <div id="main_text5">
+            <p>恩，全部都是可以设计、编译的！</p>
+        </div>
+    </div>
+    <div class="downb">
+        <a href="header"><image src="content/arrow.png"></image></a>
+    </div>
+    <div class="downb2">
+        <audio id="music2" src="content/Andrew Jasinski - Wind.mp3"  loop="loop" autoplay="autoplay" type="audio/mpeg">你的浏览器不支持audio标签</audio> 
+        <a href="javascript:playPause();"><img src="content/play.gif" width="48" height="50" id="music_btn2" border="0"></a>
+    </div>
+</body>
+</html>
