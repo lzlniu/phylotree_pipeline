@@ -1,7 +1,7 @@
 #!/bin/bash
 #author:lizelin
 #date:2020/03/03
-#utility:extract the amino acids sequence from the .gb file.
+#utility:extract amino acids seqs from .gb file.
 #use like: gbaa.sh input.gb > output (this will generate an output which contain amino acids sequence of each CDS from this .gb file)
 gbfile=$1
 sed -e '/\/translation=\"/,/\"/!d' $gbfile | sed -e '/  gene  /,/\/gene=\".*\"/d' | sed -e 's/ //g' | sed -e 's/\//\n/g' | sed -e 's/translation="/>\n/g' | sed -e 's/\"//g' | awk '!/^>/ { printf "%s", $0; n = "\n" } /^>/ { print n $0; n = "" } END { printf "%s", n }' | sed -e '1d' > protseqs.fa
