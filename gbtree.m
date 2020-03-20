@@ -6,9 +6,9 @@
 clear
 clc
 options = weboptions;
-options.Timeout = 60;
+options.Timeout = 55;
 list = importdata('list.txt');
-parfor i = 1:length(list)
+for i = 1:length(list)
     acc = char(list(i,1));
     gbname = [num2str(i),'_',acc,'.gb'];
     getgenbank(acc,'FILEFORMAT','Genbank','TOFILE',gbname);
@@ -16,7 +16,7 @@ parfor i = 1:length(list)
     multi_seqs(i).Header = acc;
 end
 mkdir gbfiles
-movefile *.gb gbfiles\
+movefile *.gb gbfiles/
 fastawrite('multi_seqs.fa',multi_seqs);
 multi_seqs = fastaread('multi_seqs.fa');
 aligned_seqs = multialign(multi_seqs);
