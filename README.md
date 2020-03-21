@@ -1,4 +1,4 @@
-# m_related
+# phylotree_pipeline
 ## 1 download_seqs&gb.m
 
 gbtree.m is a MATLAB script which can download multiple .gb files from a list.txt, list.txt should be placed in the same dictionary with download_seqs&gb.m, The list.txt should be printed only one row, each line is a NCBI accession number. It can be used in Windows or Linux, just using MATLAB desktop software. Or you can use it in Linux Shell by -- matlab -nodisplay -r "download_seqs&gb". Then you may type "exit()" to exit MATLAB command line.
